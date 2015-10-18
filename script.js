@@ -6,5 +6,8 @@ var send_button = $('#post');
 
 send_button.click(function() {
 	/* Act on the event */
-	myRef.set(user.val() + " says: " + text.val());
+	myRef.push({
+		username: user.val(),
+		message: text.val()
+	});
 });
